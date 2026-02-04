@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "230399227329",
+    "project_id": "admin-tasty-trek-ac828",
+    "storage_bucket": "admin-tasty-trek-ac828.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:230399227329:android:286f2de962399a07e4eb40",
+        "android_client_info": {
+          "package_name": "com.plcoding.admintastytrek"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB13eJ7REg1g2k_tH7xBQCtc0uiRAA2Xq4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

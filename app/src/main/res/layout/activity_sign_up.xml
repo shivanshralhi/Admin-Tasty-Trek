@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".SignUpActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:text="Tasty Trek"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo" />
+
+    <TextView
+        android:id="@+id/tvlogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up For Your\nAdmin Dashboard"
+        android:textAlignment="center"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/tvtitle"
+        app:layout_constraintStart_toStartOf="@id/tvtitle"
+        app:layout_constraintTop_toBottomOf="@id/tvtitle" />
+    <TextView
+        android:id="@+id/tvLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose Your Location"
+        android:textColor="@color/textColor"
+        app:layout_editor_absoluteX="20dp"
+        app:layout_editor_absoluteY="234dp"
+        app:layout_constraintBottom_toTopOf="@id/tiLocation"
+        app:layout_constraintStart_toStartOf="@id/tiLocation"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiLocation"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        app:endIconDrawable="@drawable/arrow_down"
+        app:endIconTint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvlogin">
+        
+        
+        <AutoCompleteTextView
+            android:id="@+id/listOfLocation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="none"
+            android:text="Choose Location"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edittextshape"
+        android:drawableLeft="@drawable/usernew"
+        android:drawablePadding="15dp"
+        android:elevation="2dp"
+        android:hint="Name Of Owner"
+        android:inputType="textEmailAddress"
+        android:outlineSpotShadowColor="@color/textColor"
+        android:paddingLeft="15dp"
+        app:layout_constraintEnd_toEndOf="@id/tiLocation"
+        app:layout_constraintStart_toStartOf="@id/tiLocation"
+        app:layout_constraintTop_toBottomOf="@id/tiLocation" />
+
+    <EditText
+        android:id="@+id/etRestaurants"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/edittextshape"
+        android:drawableLeft="@drawable/home"
+        android:drawablePadding="15dp"
+        android:elevation="2dp"
+        android:hint="Name Of Restaurant"
+        android:inputType="textPassword"
+        android:outlineSpotShadowColor="@color/textColor"
+        android:paddingLeft="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etName" />
+
+
+    <EditText
+        android:id="@+id/etSignUpEmail"
+        android:background="@drawable/edittextshape"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="12dp"
+        android:paddingLeft="15dp"
+        android:drawablePadding="15dp"
+        android:hint="Email Or PhoneNumber"
+        android:drawableLeft="@drawable/mail"
+        app:layout_constraintEnd_toEndOf="@id/etRestaurants"
+        app:layout_constraintStart_toStartOf="@id/etRestaurants"
+        app:layout_constraintTop_toBottomOf="@id/etRestaurants"/>
+
+    <EditText
+        android:id="@+id/etSignUpPassword"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edittextshape"
+        android:hint="Password"
+        android:drawableLeft="@drawable/lock"
+        android:paddingLeft="15dp"
+        android:drawablePadding="15dp"
+        app:layout_constraintEnd_toEndOf="@id/etSignUpEmail"
+        app:layout_constraintStart_toStartOf="@id/etSignUpEmail"
+        app:layout_constraintTop_toBottomOf="@id/etSignUpEmail"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSignUpLogin"
+        android:layout_width="157dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/greenbuttonshape"
+        android:textAllCaps="false"
+        android:outlineSpotShadowColor="@color/textColor"
+        android:text="Create Account"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/etSignUpPassword"
+        app:layout_constraintStart_toStartOf="@id/etSignUpPassword"
+        app:layout_constraintTop_toBottomOf="@id/etSignUpPassword"
+
+         />
+    <TextView
+        android:id="@+id/tvAlreadyHaveAnAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already Have An Account?"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:textColor="@color/textColor"
+        app:layout_constraintEnd_toEndOf="@id/btnSignUpLogin"
+        app:layout_constraintStart_toStartOf="@id/btnSignUpLogin"
+        app:layout_constraintTop_toBottomOf="@id/btnSignUpLogin"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
